@@ -3,9 +3,14 @@ import { prisma } from "@/prisma/client";
 import { Card, Flex, Heading, Text } from "@radix-ui/themes";
 import { notFound } from "next/navigation";
 
-const IssueDetailPage = async ({ params }: { params: { id: string } }) => {
+interface Props {
+  params: { id: string };
+}
+
+const IssueDetailPage = async ({ params }: Props) => {
+  const { id } = await params;
   const issue = await prisma.issue.findUnique({
-    where: { id: parseInt(params.id) },
+    where: { id: parseInt(id) },
   });
 
   if (!issue) notFound();
