@@ -15,7 +15,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <nav className="border-b py-5 mb-5">
+    <nav className="border-b py-5">
       <div className="container">
         <div className="flex items-center gap-6">
           <Link href="/">

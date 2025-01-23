@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <Theme accentColor="violet">
           <NavBar></NavBar>
-          <main>
+          <main className="py-10">
             <div className="container">{children}</div>
           </main>
         </Theme>
